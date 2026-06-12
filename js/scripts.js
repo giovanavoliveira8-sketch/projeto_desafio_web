@@ -38,7 +38,7 @@ num2 = 6
 
 console.log(num2)
 
-num3= 12
+//num3= 12
 
 //CONCATENAÇÂO
 console.log("Valor de num " -num)
@@ -65,7 +65,7 @@ console.log('SUBTRAÇÃO DAS VARIÁVEIS ', num3 - num)
 console.log('MULTIPLICAÇÂO DAS VARIÁVEIS ', num5 * 2)
 console.log('DIVISÃO DE VALORES ', num2 / 5)
 console.log('RESTO DA DIVISÂO ', num2 % 2)
-console.log(`RESTO DA DIVISÃO `, $(num3 % 3))
+//console.log(`RESTO DA DIVISÃO `, $(num3 % 3))
 
 //OPERADORES RELACIONAIS
 /*
