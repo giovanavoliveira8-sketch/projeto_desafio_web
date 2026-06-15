@@ -1,5 +1,5 @@
 //PEGANDO ELEMENTOS DO DOM
-const formDados = document.querySelector('#formulario-pessoa')
+const formDados = document.querySelector('#formulario')
 const divResultado = document.querySelector('#div-dados')
 
 //CAPTURANDO O EVENTO SUBMIT [X] FORMULÁRIO
@@ -9,14 +9,12 @@ formDados.addEventListener ('submit', (evt)=>{
     
     const objFormDados =new FormData(formDados)
     
-    let n1 = objFormDados.get('num1')
-    let n2 = objFormDados.get('num2')
-    let n3 = objFormDados.get('num3')
+    let largura = objFormDados.get('largura')
+    let altura = objFormDados.get('altura')
 
-    let media = parseFloat((n1 + n2 + n3)) / parseFloat (3)
+    let area = largura * altura
 
-    divResultado.innerHTML = `A MÉDIA DOS NÚMEROS DIGITADOS É: ${media}`
-    {media.toFixed(2).replace('.',',')}
+    divResultado.innerHTML = `A área a ser pintada é de ${area.toFixed(2).replace('.',',')}m², Total de litros para pintar essa área é de ${parseFloat(area /2).toFixed(2).replace('.',',')}`
 
     formDados.reset()
     
