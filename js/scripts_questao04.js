@@ -9,14 +9,17 @@ formDados.addEventListener ('submit', (evt)=>{
     
     const objFormDados =new FormData(formDados)
     
-    let distancia = objFormDados.get('distancia')
-    let consumo = objFormDados.get('consumo')
-    let preco = objFormDados.get('preco')
+    let nota1 = objFormDados.get('nota1')
+    let nota2 = objFormDados.get('nota2')
+    let nota3 = objFormDados.get('nota3')
 
-    let gastoCombustivel = distancia /consumo
-    let valorTotal = preco * gastoCombustivel
+    let media = parseFloat((nota1 + nota2 + nota3)) / 3
 
-    divResultado.innerHTML = `A quantidade de combustível necessário para percorrer o trajeto é de ${gastoCombustivel.toFixed(2).replace('.',',')}, Valor total a pagar com combustível é de ${valorTotal.toFixed(2).replace('.',',')}`
+    if(media >= 6){
+        divResultado.innerHTML = 'APROVADO!!'
+    }else{
+        divResultado.innerHTML = 'REPROVADO!!'
+    }
 
     formDados.reset()
     
