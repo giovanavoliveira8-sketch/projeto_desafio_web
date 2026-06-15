@@ -9,17 +9,21 @@ formDados.addEventListener ('submit', (evt)=>{
     
     const objFormDados =new FormData(formDados)
     
-    let nota1 = objFormDados.get('nota1')
-    let nota2 = objFormDados.get('nota2')
-    let nota3 = objFormDados.get('nota3')
+    let nota1 = parseFloat(objFormDados.get('nota1'))
+    let nota2 = parseFloat(objFormDados.get('nota2'))
+    let nota3 = parseFloat(objFormDados.get('nota3'))
 
-    let media = parseFloat((nota1 + nota2 + nota3)) / 3
+    let media = (nota1 + nota2 + nota3) / 3
+
+    condicaoAluno = ''
 
     if(media >= 6){
-        divResultado.innerHTML = 'APROVADO!!'
+        condicaoAluno = 'APROVADO!'
     }else{
-        divResultado.innerHTML = 'REPROVADO!!'
+        condicaoAluno = 'REPROVADO!'
     }
+    
+    divResultado.innerHTML = condicaoAluno
 
     formDados.reset()
     
