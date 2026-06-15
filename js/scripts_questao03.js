@@ -16,7 +16,7 @@ formDados.addEventListener ('submit', (evt)=>{
     let gastoCombustivel = distancia /consumo
     let valorTotal = preco * gastoCombustivel
 
-    divResultado.innerHTML = `A quantidade de combustível necessário para percorrer o trajeto é de ${gastoCombustivel.toFixed(2).replace('.',',')}m², Valor total a pagar com combustível é de ${valorTotal.toFixed(2).replace('.',',')}`
+    divResultado.innerHTML = `A quantidade de combustível necessário para percorrer o trajeto é de ${gastoCombustivel.toFixed(2).replace('.',',')}, Valor total a pagar com combustível é de ${valorTotal.toFixed(2).replace('.',',')}`
 
     formDados.reset()
     
